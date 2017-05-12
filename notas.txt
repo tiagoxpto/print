@@ -1,1 +1,2 @@
 Ctrl+Alt+L - formtar codigo
+Ctrl+shift+f - procurar em todo o lado
