@@ -17,6 +17,4 @@ class RequestPrint extends Model
     protected $fillable = [
         'id','description', 'updated_at','created_at'
     ];
-
-
 }
