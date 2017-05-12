@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'UserController@list_users');
+Route::get('/home/impressoes', 'controladorImpressoes@formularioImpressao')->name('impressoes');
+Route::post('/home/impressoes', 'controladorImpressoes@store');

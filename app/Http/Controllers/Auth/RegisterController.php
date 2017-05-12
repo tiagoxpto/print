@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Department;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -78,8 +79,16 @@ class RegisterController extends Controller
             'print_counts' => 0,
             'created_at' => 0,
             'updated_at' => 0,
-            'department_id' => 2,
+            'department_id' => $data['department_id'],
 
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        $departments = Department::all();
+
+        return view('auth.register', compact('departments'));
+    }
 }
+
