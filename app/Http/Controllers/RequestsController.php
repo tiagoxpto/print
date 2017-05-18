@@ -39,7 +39,6 @@ class RequestsController extends Controller
     public function store(StoreRequest $request)
     {
         $requestPrint = new RequestPrint($request->all());
-
         $requestPrint->status= 0;
         $requestPrint->owner_id = Auth::id();
 
