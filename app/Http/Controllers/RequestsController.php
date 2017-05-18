@@ -39,19 +39,13 @@ class RequestsController extends Controller
     public function store(StoreRequest $request)
     {
         $requestPrint = new RequestPrint($request->all());
-
         $requestPrint->status= 0;
         $requestPrint->owner_id = Auth::id();
-
         $file = $request->file('file');
         $filename = $request->file->hashName();
-
         $file->store('print-jobs/'.$requestPrint->owner_id.'/');
-
         $requestPrint->file = $filename;
-
         $requestPrint->save();
-
         return redirect(URL::Route('impressoes.index'));
     }
 
