@@ -15,8 +15,11 @@ class RequestPrint extends Model
 {
 
     protected $fillable = [
-        'id','description', 'updated_at','created_at','quantity','paper_size', 'paper_type', 'file', 'owner_id'
-    ];
+        'id','description', 'updated_at','created_at'
 
-    protected $table = "requests";
+
+
+
+
+    ];
 }

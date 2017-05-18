@@ -17,9 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('users', 'UserController@list_users');
-Route::get('impressoes', 'RequestsController@index')->name('impressoes.index');
-Route::get('impressoes/create', 'RequestsController@create')->name('impressoes');
-Route::post('impressoes', 'RequestsController@store')->name('impressoes.store');
+Route::get('/users', 'UserController@list_users');
+Route::get('/home/impressoes', 'controladorImpressoes@formularioImpressao')->name('impressoes');
+Route::post('/home/impressoes', 'controladorImpressoes@store');
